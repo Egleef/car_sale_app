@@ -1,0 +1,19 @@
+<h1>Subir un nuevo auto para la venta</h1>
+
+
+<%= form_with model: @car, url: cars_path do |form| %>
+      <label> Marca </label>
+    <%= form.text_field :brand %>
+    </br>
+    </br>
+    <label> Modelo </label>
+    <%= form.text_field :model %>
+    </br>
+    </br>
+    </label> Precio </label>
+    <%= form.number_field :price %>
+    </br>
+    </br>
+    <%= form.submit 'Enviar' %>
+<% end %>
+
