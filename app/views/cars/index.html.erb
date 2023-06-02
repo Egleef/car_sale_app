@@ -1,15 +1,21 @@
-<h2>Cars disponibles para comprar<h2>
-<div>
-<% @cars.each do |car|%>
-    <hr>
-    <label> Marca </label>
-    <h6><%= car.brand%></h6>
-    </label> Modelo </label>
-    <h6><%= car.model%></h6>
-    </label> Precio </label>
-    <h6><%= car.price%></h6>
-    </hr>
-<% end %>
-</div>
-    
+<h3>Cars disponibles para comprar</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.brand %></td>
+        <td><%= car.model %></td>
+        <td><%= car.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to "New car", new_car_path %>
